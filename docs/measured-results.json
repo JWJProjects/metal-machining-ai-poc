@@ -1,0 +1,411 @@
+{
+  "schema_version": 1,
+  "provenance": "synthetic_offline",
+  "policy": {
+    "size": 96,
+    "sampleRate": 96,
+    "trainBatches": 18,
+    "testBatches": 10,
+    "windowsPerBatch": 24,
+    "modelCutoff": 0.5,
+    "seed": 3221
+  },
+  "main": {
+    "model": {
+      "means": [
+        0.4805735325936347,
+        0.6630568657302001,
+        0.24162672668968274,
+        20.894856272793728
+      ],
+      "scale": [
+        0.14052500119091987,
+        0.21928461899605267,
+        0.43793454112705793,
+        32.43276250897314
+      ],
+      "weights": [
+        -0.45976151681716565,
+        0.29297205911627733,
+        1.4929873904358237,
+        1.1347031606152485,
+        0.9115390399054173
+      ],
+      "baseline": 0.3541729270745822,
+      "rule": {
+        "quickRatio": 0.880208882683594,
+        "rpmDelta": 14.23794508444621
+      }
+    },
+    "metrics": {
+      "logistic": {
+        "tp": 81,
+        "tn": 150,
+        "fp": 0,
+        "fn": 9,
+        "unsupported": 0,
+        "recall": 0.9,
+        "falseAlarm": 0,
+        "precision": 1,
+        "balanced": 0.95
+      },
+      "baseline": {
+        "tp": 74,
+        "tn": 27,
+        "fp": 123,
+        "fn": 16,
+        "unsupported": 0,
+        "recall": 0.8222222222222222,
+        "falseAlarm": 0.82,
+        "precision": 0.3756345177664975,
+        "balanced": 0.5011111111111111
+      },
+      "rule": {
+        "tp": 84,
+        "tn": 149,
+        "fp": 1,
+        "fn": 6,
+        "unsupported": 0,
+        "recall": 0.9333333333333333,
+        "falseAlarm": 0.006666666666666667,
+        "precision": 0.9882352941176471,
+        "balanced": 0.9633333333333334
+      },
+      "breakdown": {
+        "normal": {
+          "tp": 0,
+          "tn": 100,
+          "fp": 0,
+          "fn": 0,
+          "unsupported": 0,
+          "recall": null,
+          "falseAlarm": 0,
+          "precision": null,
+          "balanced": null
+        },
+        "isolated": {
+          "tp": 0,
+          "tn": 50,
+          "fp": 0,
+          "fn": 0,
+          "unsupported": 0,
+          "recall": null,
+          "falseAlarm": 0,
+          "precision": null,
+          "balanced": null
+        },
+        "chatter": {
+          "tp": 41,
+          "tn": 0,
+          "fp": 0,
+          "fn": 9,
+          "unsupported": 0,
+          "recall": 0.82,
+          "falseAlarm": null,
+          "precision": 1,
+          "balanced": null
+        },
+        "load": {
+          "tp": 40,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0,
+          "unsupported": 0,
+          "recall": 1,
+          "falseAlarm": null,
+          "precision": 1,
+          "balanced": null
+        }
+      }
+    },
+    "batches": {
+      "train": [
+        "train-01",
+        "train-02",
+        "train-03",
+        "train-04",
+        "train-05",
+        "train-06",
+        "train-07",
+        "train-08",
+        "train-09",
+        "train-10",
+        "train-11",
+        "train-12",
+        "train-13",
+        "train-14",
+        "train-15",
+        "train-16",
+        "train-17",
+        "train-18"
+      ],
+      "test": [
+        "test-01",
+        "test-02",
+        "test-03",
+        "test-04",
+        "test-05",
+        "test-06",
+        "test-07",
+        "test-08",
+        "test-09",
+        "test-10"
+      ]
+    },
+    "windows": {
+      "train": 432,
+      "test": 240
+    }
+  },
+  "stress_existing_holdout_only": {
+    "vibration_gain_045": {
+      "logistic": {
+        "tp": 72,
+        "tn": 150,
+        "fp": 0,
+        "fn": 18,
+        "unsupported": 0,
+        "recall": 0.8,
+        "falseAlarm": 0,
+        "precision": 1,
+        "balanced": 0.9
+      },
+      "baseline": {
+        "tp": 0,
+        "tn": 141,
+        "fp": 9,
+        "fn": 90,
+        "unsupported": 0,
+        "recall": 0,
+        "falseAlarm": 0.06,
+        "precision": 0,
+        "balanced": 0.47
+      },
+      "rule": {
+        "tp": 84,
+        "tn": 149,
+        "fp": 1,
+        "fn": 6,
+        "unsupported": 0,
+        "recall": 0.9333333333333333,
+        "falseAlarm": 0.006666666666666667,
+        "precision": 0.9882352941176471,
+        "balanced": 0.9633333333333334
+      },
+      "breakdown": {
+        "normal": {
+          "tp": 0,
+          "tn": 100,
+          "fp": 0,
+          "fn": 0,
+          "unsupported": 0,
+          "recall": null,
+          "falseAlarm": 0,
+          "precision": null,
+          "balanced": null
+        },
+        "isolated": {
+          "tp": 0,
+          "tn": 50,
+          "fp": 0,
+          "fn": 0,
+          "unsupported": 0,
+          "recall": null,
+          "falseAlarm": 0,
+          "precision": null,
+          "balanced": null
+        },
+        "chatter": {
+          "tp": 34,
+          "tn": 0,
+          "fp": 0,
+          "fn": 16,
+          "unsupported": 0,
+          "recall": 0.68,
+          "falseAlarm": null,
+          "precision": 1,
+          "balanced": null
+        },
+        "load": {
+          "tp": 38,
+          "tn": 0,
+          "fp": 0,
+          "fn": 2,
+          "unsupported": 0,
+          "recall": 0.95,
+          "falseAlarm": null,
+          "precision": 1,
+          "balanced": null
+        }
+      }
+    },
+    "vibration_gain_180": {
+      "logistic": {
+        "tp": 84,
+        "tn": 102,
+        "fp": 3,
+        "fn": 6,
+        "unsupported": 45,
+        "recall": 0.9333333333333333,
+        "falseAlarm": 0.02857142857142857,
+        "precision": 0.9655172413793104,
+        "balanced": 0.9523809523809524
+      },
+      "baseline": {
+        "tp": 90,
+        "tn": 0,
+        "fp": 105,
+        "fn": 0,
+        "unsupported": 45,
+        "recall": 1,
+        "falseAlarm": 1,
+        "precision": 0.46153846153846156,
+        "balanced": 0.5
+      },
+      "rule": {
+        "tp": 84,
+        "tn": 104,
+        "fp": 1,
+        "fn": 6,
+        "unsupported": 45,
+        "recall": 0.9333333333333333,
+        "falseAlarm": 0.009523809523809525,
+        "precision": 0.9882352941176471,
+        "balanced": 0.9619047619047619
+      },
+      "breakdown": {
+        "normal": {
+          "tp": 0,
+          "tn": 97,
+          "fp": 3,
+          "fn": 0,
+          "unsupported": 0,
+          "recall": null,
+          "falseAlarm": 0.03,
+          "precision": 0,
+          "balanced": null
+        },
+        "isolated": {
+          "tp": 0,
+          "tn": 5,
+          "fp": 0,
+          "fn": 0,
+          "unsupported": 45,
+          "recall": null,
+          "falseAlarm": 0,
+          "precision": null,
+          "balanced": null
+        },
+        "chatter": {
+          "tp": 44,
+          "tn": 0,
+          "fp": 0,
+          "fn": 6,
+          "unsupported": 0,
+          "recall": 0.88,
+          "falseAlarm": null,
+          "precision": 1,
+          "balanced": null
+        },
+        "load": {
+          "tp": 40,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0,
+          "unsupported": 0,
+          "recall": 1,
+          "falseAlarm": null,
+          "precision": 1,
+          "balanced": null
+        }
+      }
+    },
+    "rpm_linear_drift_22": {
+      "logistic": {
+        "tp": 78,
+        "tn": 149,
+        "fp": 1,
+        "fn": 12,
+        "unsupported": 0,
+        "recall": 0.8666666666666667,
+        "falseAlarm": 0.006666666666666667,
+        "precision": 0.9873417721518988,
+        "balanced": 0.93
+      },
+      "baseline": {
+        "tp": 74,
+        "tn": 27,
+        "fp": 123,
+        "fn": 16,
+        "unsupported": 0,
+        "recall": 0.8222222222222222,
+        "falseAlarm": 0.82,
+        "precision": 0.3756345177664975,
+        "balanced": 0.5011111111111111
+      },
+      "rule": {
+        "tp": 77,
+        "tn": 96,
+        "fp": 54,
+        "fn": 13,
+        "unsupported": 0,
+        "recall": 0.8555555555555555,
+        "falseAlarm": 0.36,
+        "precision": 0.5877862595419847,
+        "balanced": 0.7477777777777779
+      },
+      "breakdown": {
+        "normal": {
+          "tp": 0,
+          "tn": 99,
+          "fp": 1,
+          "fn": 0,
+          "unsupported": 0,
+          "recall": null,
+          "falseAlarm": 0.01,
+          "precision": 0,
+          "balanced": null
+        },
+        "isolated": {
+          "tp": 0,
+          "tn": 50,
+          "fp": 0,
+          "fn": 0,
+          "unsupported": 0,
+          "recall": null,
+          "falseAlarm": 0,
+          "precision": null,
+          "balanced": null
+        },
+        "chatter": {
+          "tp": 40,
+          "tn": 0,
+          "fp": 0,
+          "fn": 10,
+          "unsupported": 0,
+          "recall": 0.8,
+          "falseAlarm": null,
+          "precision": 1,
+          "balanced": null
+        },
+        "load": {
+          "tp": 38,
+          "tn": 0,
+          "fp": 0,
+          "fn": 2,
+          "unsupported": 0,
+          "recall": 0.95,
+          "falseAlarm": null,
+          "precision": 1,
+          "balanced": null
+        }
+      }
+    }
+  },
+  "limitations": [
+    "all_records_generated_from_one_simulation_family",
+    "stress_not_a_second_independent_dataset",
+    "thresholds_not_field_specifications",
+    "not_health_assessment_control_or_safety"
+  ]
+}

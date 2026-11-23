@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>轉序｜金屬加工異常分流 PoC</title><link rel="stylesheet" href="./style.css"></head>
+<body>
+<a class="skip" href="#main">跳至主要內容</a>
+<header><div class="brand"><span class="emblem" aria-hidden="true">◈</span> 轉序</div><span>金屬加工異常分流</span><b class="mode">合成資料 · 離線 PoC</b></header>
+<main id="main">
+<section class="intro"><p class="kicker">主軸振動 × 驅動電流 × 轉速</p><h1>先分流可疑訊號，再由人覆核</h1><p>比較統計模型、雙訊號規則及單一振動門檻。只作抽查排序，不判定設備健康、不連線控制或停機。</p></section>
+<section aria-labelledby="bench-title" class="bench">
+  <h2 id="bench-title">01&nbsp; 單窗判讀</h2>
+  <div class="selector">
+    <label for="scenario">載入合成情境</label><select id="scenario"></select>
+    <label for="channel">觀察訊號</label><select id="channel"><option value="vibration">主軸振動（任意單位）</option><option value="current">驅動電流（模擬 A）</option><option value="rpm">主軸轉速（模擬 rpm）</option></select>
+  </div>
+  <div class="testbed">
+    <div class="plot"><div class="plot-top"><h3 id="plot-title">訊號</h3><span id="sample-id"></span></div><svg id="chart" viewBox="0 0 620 235" role="img" aria-labelledby="plot-title chart-caption"></svg><p id="chart-caption"></p></div>
+    <aside class="decision" aria-labelledby="decision-title">
+      <p class="kicker">分流結果</p><h3 id="decision-title"></h3><p id="confidence"></p>
+      <dl><div><dt>合成參考標籤</dt><dd id="truth"></dd></div><div><dt>雙訊號規則</dt><dd id="rules"></dd></div><div><dt>振動基線</dt><dd id="baseline"></dd></div><div><dt>四項輸入特徵</dt><dd id="feature-values"></dd></div></dl>
+      <label for="review">覆核備註（只存入本次匯出）</label><select id="review"><option value="">未覆核</option><option value="queue">標記建議人工查核</option><option value="defer">資料不足，暫緩</option></select>
+    </aside>
+  </div>
+  <div id="announcement" role="status" class="sr"></div>
+</section>
+<section aria-labelledby="check-title" class="validation">
+  <div class="validation-head"><div><h2 id="check-title">02&nbsp; 留出驗證</h2><p id="cohort"></p></div><button id="export">匯出本次測試 JSON</button></div>
+  <div class="table-wrap"><table><caption class="sr">同一批留出合成資料，兩種模型表現比較</caption><thead><tr><th scope="col">方法</th><th scope="col">召回率</th><th scope="col">誤報率</th><th scope="col">真陽 / 漏報</th><th scope="col">真陰 / 誤報</th></tr></thead><tbody id="results"></tbody></table></div>
+  <p id="limits"></p>
+</section>
+</main><footer>研究雛型 · 數值由同一套合成機制生成，無現場或驗收效力。人工查核才是後續行動依據。</footer>
+<script type="module" src="./app.mjs"></script>
+</body></html>
